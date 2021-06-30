@@ -1,14 +1,21 @@
 import React from "react";
-const App = () => {
-  const now = new Date();
-  const a = 10;
-  const b = 20;
+const Hello = (props) => {
   return (
     <div>
-      <p>Hello world, it is {now.toString()}</p>
       <p>
-        {a} plus {b} is {a + b}
+        Hello {props.name}, you are {props.age} years old.
       </p>
+    </div>
+  );
+};
+const App = () => {
+  let name = "Peter";
+  let age = 10;
+  return (
+    <div>
+      <p>Greetings</p>
+      <Hello name={name} age={age} />
+      <Hello name="Maya" age={26 + 10} />
     </div>
   );
 };
